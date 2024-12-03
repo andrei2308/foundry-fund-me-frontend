@@ -1,19 +1,108 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fund Me App</title>
-  </head>
+    <style>
+        /* Basic reset */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f7fc;
+        }
 
-  <body>
-    <button id="connectButton">Connect</button>
-    <button id="balanceButton">getBalance</button>
-    <button id="withdrawButton">Withdraw</button>
-    <!-- <form> -->
-    <label for="ethAmount">ETH Amount</label>
-    <input id="ethAmount" placeholder="0.1" />
-    <button type="button" id="fundButton" > Fund </button>
-    <!-- </form> -->
-  </body>
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-  <script src="./index.js" type="module"></script>
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            border: 2px solid #5c6bc0;
+        }
+
+        /* Form Elements */
+        label {
+            font-size: 1.1rem;
+            color: #333;
+            margin-top: 15px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 250px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            margin: 10px;
+            border: none;
+            background-color: #5c6bc0;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3f4e91;
+        }
+
+        button:disabled {
+            background-color: #bbb;
+            cursor: not-allowed;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Fund Me App</h1>
+        <!-- Buttons and Input Fields -->
+        <div class="button-group">
+            <button id="connectButton">Connect</button>
+            <button id="balanceButton">Get Balance</button>
+            <button id="withdrawButton">Withdraw</button>
+        </div>
+        <div class="input-group">
+            <label for="ethAmount">ETH Amount</label>
+            <input id="ethAmount" placeholder="0.1" />
+        </div>
+        <button id="fundButton">Fund</button>
+    </div>
+
+    <script src="./index.js" type="module"></script>
+</body>
+
 </html>
