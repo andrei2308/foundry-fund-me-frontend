@@ -32,7 +32,7 @@ If you can't or don't want to run and install locally, you can work with this re
 1. Clone the repo
 
 ```
-git clone https://github.com/Cyfrin/html-fund-me-cu
+git clone https://github.com/andrei2308/foundry-fund-me-frontend
 cd html-fund-me-cu
 ```
 
@@ -55,8 +55,8 @@ If you want to execute a transaction follow this, you'll need to setup a chain. 
 1. You'll need to open up a second terminal and run:
 
 ```
-git clone https://github.com/Cyfrin/foundry-fund-me-cu
-cd foundry-fund-me-cu
+git clone https://github.com/andrei2308/foundry-fund-me
+cd foundry-fund-me-f23
 make build
 make anvil
 ```
@@ -65,21 +65,6 @@ Then, in a second terminal
 ```
 make deploy
 ```
-
-> Moccasin
-
-Or, if you use [moccasin](https://github.com/Cyfrin/moccasin), you can run 
-```
-git clone https://github.com/Cyfrin/buy-me-a-coffee-cu
-cd buy-me-a-coffee-cu
-anvil
-```
-
-Then, in a second terminal
-```
-mox run deploy --network anvil
-```
-
 This will deploy a sample contract and start a local hardhat blockchain. 
 
 After you've deployed with either foundry or moccasin, you can should then:
